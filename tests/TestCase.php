@@ -2,8 +2,8 @@
 
 namespace Tests;
 
-use InovantiBank\Holidays\HolidaysServiceProvider;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
+use InovantiBank\Holidays\Providers\HolidaysServiceProvider;
 
 class TestCase extends OrchestraTestCase
 {
