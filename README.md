@@ -54,8 +54,8 @@ Holiday::create([
     'date' => '2025-09-07',
     'type' => 'fix',
     'state' => null,
-    'optional' => false
-    'scope' => 'state'
+    'optional' => false,
+    'scope' => 'state',
     'is_national' => true
 ]);
 ```
