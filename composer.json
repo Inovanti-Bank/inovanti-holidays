@@ -2,25 +2,9 @@
   "name": "inovanti-bank/inovanti-holidays",
   "description": "Pacote para gerenciamento de feriados fixos e móveis em Laravel 11+",
   "type": "library",
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "license": "MIT",
-  "keywords": [
-    "laravel",
-    "feriados",
-    "holidays",
-    "calendar",
-    "inovanti"
-  ],
-  "authors": [
-    {
-      "name": "inovanti Ip",
-      "email": "dev@inovanti.com.br"
-    }
-  ],
   "require": {
-    "php": "^8.2",
-    "laravel/framework": "^11.0|^10.0"
+    "php": "^8.0",
+    "laravel/framework": "^11.0"
   },
   "autoload": {
     "psr-4": {
@@ -35,20 +19,35 @@
   "extra": {
     "laravel": {
       "providers": [
-        "InovantiBank\\Holidays\\HolidaysServiceProvider"
+        "InovantiBank\\Holidays\\Providers\\HolidaysServiceProvider"
       ]
     }
-  },
-  "require-dev": {
-    "phpunit/phpunit": "^11.5",
-    "mockery/mockery": "^1.6",
-    "laravel/pint": "^1.19",
-    "orchestra/testbench": "^9.0"
   },
   "scripts": {
     "test": "vendor/bin/phpunit",
     "unit": "vendor/bin/phpunit --testsuite=Unit",
     "feature": "vendor/bin/phpunit --testsuite=Feature",
     "pint": "vendor/bin/pint"
-  }
+  },
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "inovanti Ip",
+      "email": "dev@inovanti.com.br"
+    }
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "^11.5",
+    "mockery/mockery": "^1.6",
+    "laravel/pint": "^1.19",
+    "orchestra/testbench": "^9.0"
+  },
+  "keywords": [
+    "laravel",
+    "feriados",
+    "holidays",
+    "calendar",
+    "inovanti"
+  ]
 }
