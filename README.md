@@ -52,7 +52,10 @@ $holidays = Holiday::all();
 Holiday::create([
     'name' => 'Dia da Independência',
     'date' => '2025-09-07',
-    'state' => 'SP',
+    'type' => 'fix',
+    'state' => null,
+    'optional' => false
+    'scope' => 'state'
     'is_national' => true
 ]);
 ```
@@ -60,15 +63,18 @@ Holiday::create([
 ### 3. **Verificar se uma data é feriado**
 
 ```php
-$holiday = Holiday::where('date', '2025-12-25')->exists();
+return Holiday::where('date', '2025-12-25')->exists();
 ```
 
 ### 4. **Calcular o próximo dia útil**
 
 ```php
-use Inovanti\Holidays\Services\HolidayService;
+use Carbon\Carbon;
+use InovantiBank\Holidays\Helpers\DateHelper;
+// Consulte mais métodos de apoio na classe DateHelper
 
-$nextBusinessDay = HolidayService::nextBusinessDay('2025-12-24');
+$today = Carbon::today();
+return $helper->getNextBusinessDay($today);
 ```
 
 ### 5. **Popular feriados na base de dados**
