@@ -1,9 +1,9 @@
 # Inovanti Holidays - Gerenciamento de Feriados
 
-[![Latest Stable Version](https://poser.pugx.org/inovanti-bank/messaging/v)](https://packagist.org/packages/inovanti-bank/messaging)
-[![Total Downloads](https://poser.pugx.org/inovanti-bank/messaging/downloads)](https://packagist.org/packages/inovanti-bank/messaging)
-[![License](https://poser.pugx.org/inovanti-bank/messaging/license)](https://packagist.org/packages/inovanti-bank/messaging)
-[![PHP Version Require](https://poser.pugx.org/inovanti-bank/messaging/require/php)](https://packagist.org/packages/inovanti-bank/messaging)
+[![Latest Stable Version](https://poser.pugx.org/inovanti-bank/inovanti-Holidays/v)](https://packagist.org/packages/inovanti-bank/inovanti-Holidays)
+[![Total Downloads](https://poser.pugx.org/inovanti-bank/inovanti-Holidays/downloads)](https://packagist.org/packages/inovanti-bank/inovanti-Holidays)
+[![License](https://poser.pugx.org/inovanti-bank/inovanti-Holidays/license)](https://packagist.org/packages/inovanti-bank/inovanti-Holidays)
+[![PHP Version Require](https://poser.pugx.org/inovanti-bank/inovanti-Holidays/require/php)](https://packagist.org/packages/inovanti-bank/inovanti-Holidays)
 
 ## Introdução
 
@@ -116,4 +116,4 @@ Contribuições são bem-vindas! Se você deseja reportar um bug, solicitar um n
 
 ## 📜 Licença
 
-Este projeto está licenciado sob a [MIT license](https://github.com/Inovanti-Bank/inovanti-holydays/tree/developer?tab=License-1-ov-file#).
+Este projeto está licenciado sob a [MIT license](https://github.com/Inovanti-Bank/inovanti-Holidays/tree/developer?tab=License-1-ov-file#).

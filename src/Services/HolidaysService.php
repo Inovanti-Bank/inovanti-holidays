@@ -1,14 +1,14 @@
 <?php
 
-namespace InovantiBank\Holydays\Services;
+namespace InovantiBank\Holidays\Services;
 
-use InovantiBank\Holydays\Contracts\HolydaysRepositoryInterface;
+use InovantiBank\Holidays\Contracts\HolidaysRepositoryInterface;
 
-class HolydaysService
+class HolidaysService
 {
-    protected HolydaysRepositoryInterface $repository;
+    protected HolidaysRepositoryInterface $repository;
 
-    public function __construct(HolydaysRepositoryInterface $repository)
+    public function __construct(HolidaysRepositoryInterface $repository)
     {
         $this->repository = $repository;
     }

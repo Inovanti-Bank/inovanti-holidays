@@ -1,12 +1,12 @@
 <?php
 
-namespace InovantiBank\Holydays\Repositories;
+namespace InovantiBank\Holidays\Repositories;
 
-use InovantiBank\Holydays\Contracts\HolydaysRepositoryInterface;
-use InovantiBank\Holydays\Exceptions\InvalidYearException;
-use InovantiBank\Holydays\Models\Holiday;
+use InovantiBank\Holidays\Contracts\HolidaysRepositoryInterface;
+use InovantiBank\Holidays\Exceptions\InvalidYearException;
+use InovantiBank\Holidays\Models\Holiday;
 
-class HolydaysRepository implements HolydaysRepositoryInterface
+class HolidaysRepository implements HolidaysRepositoryInterface
 {
     public function list(int $perPage = 10)
     {

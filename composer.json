@@ -1,5 +1,5 @@
 {
-  "name": "inovanti-bank/inovanti-holydays",
+  "name": "inovanti-bank/inovanti-holidays",
   "description": "Pacote para gerenciamento de feriados fixos e móveis em Laravel 11+",
   "type": "library",
   "minimum-stability": "dev",
@@ -24,7 +24,7 @@
   },
   "autoload": {
     "psr-4": {
-      "InovantiBank\\Holydays\\": "src/"
+      "InovantiBank\\Holidays\\": "src/"
     }
   },
   "autoload-dev": {
@@ -35,7 +35,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "InovantiBank\\Holydays\\HolydaysServiceProvider"
+        "InovantiBank\\Holidays\\HolidaysServiceProvider"
       ]
     }
   },

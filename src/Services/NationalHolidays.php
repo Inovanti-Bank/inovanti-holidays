@@ -1,9 +1,9 @@
 <?php
 
-namespace InovantiBank\Holydays\Services;
+namespace InovantiBank\Holidays\Services;
 
 use Carbon\Carbon;
-use InovantiBank\Holydays\Models\Holiday;
+use InovantiBank\Holidays\Models\Holiday;
 
 class NationalHolidays
 {

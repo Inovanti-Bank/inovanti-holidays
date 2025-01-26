@@ -1,8 +1,8 @@
 <?php
 
-namespace InovantiBank\Holydays\Contracts;
+namespace InovantiBank\Holidays\Contracts;
 
-interface HolydaysRepositoryInterface
+interface HolidaysRepositoryInterface
 {
     /**
      * Lista todos os feriados paginados.

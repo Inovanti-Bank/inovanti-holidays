@@ -1,15 +1,15 @@
 <?php
 
-namespace InovantiBank\Holydays\Helpers;
+namespace InovantiBank\Holidays\Helpers;
 
 use Carbon\Carbon;
-use InovantiBank\Holydays\Contracts\HolydaysRepositoryInterface;
+use InovantiBank\Holidays\Contracts\HolidaysRepositoryInterface;
 
 class DateHelper
 {
-    protected HolydaysRepositoryInterface $repository;
+    protected HolidaysRepositoryInterface $repository;
 
-    public function __construct(HolydaysRepositoryInterface $repository)
+    public function __construct(HolidaysRepositoryInterface $repository)
     {
         $this->repository = $repository;
     }

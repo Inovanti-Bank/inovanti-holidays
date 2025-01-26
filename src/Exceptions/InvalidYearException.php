@@ -1,6 +1,6 @@
 <?php
 
-namespace InovantiBank\Holydays\Exceptions;
+namespace InovantiBank\Holidays\Exceptions;
 
 use Exception;
 use Throwable;

@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use InovantiBank\Holydays\HolydaysServiceProvider;
+use InovantiBank\Holidays\HolidaysServiceProvider;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
 class TestCase extends OrchestraTestCase
@@ -10,7 +10,7 @@ class TestCase extends OrchestraTestCase
     protected function getPackageProviders($app)
     {
         return [
-            HolydaysServiceProvider::class,
+            HolidaysServiceProvider::class,
         ];
     }
 

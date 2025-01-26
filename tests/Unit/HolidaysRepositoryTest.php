@@ -3,22 +3,22 @@
 namespace Tests\Unit;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use InovantiBank\Holydays\Exceptions\InvalidYearException;
-use InovantiBank\Holydays\Models\Holiday;
-use InovantiBank\Holydays\Repositories\HolydaysRepository;
+use InovantiBank\Holidays\Exceptions\InvalidYearException;
+use InovantiBank\Holidays\Models\Holiday;
+use InovantiBank\Holidays\Repositories\HolidaysRepository;
 use Tests\TestCase;
 
-class HolydaysRepositoryTest extends TestCase
+class HolidaysRepositoryTest extends TestCase
 {
     use RefreshDatabase;
 
-    protected HolydaysRepository $repo;
+    protected HolidaysRepository $repo;
 
     protected function setUp(): void
     {
         parent::setUp();
 
-        $this->repo = new HolydaysRepository;
+        $this->repo = new HolidaysRepository;
     }
 
     public function test_can_create_holiday()

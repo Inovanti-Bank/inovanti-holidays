@@ -3,21 +3,21 @@
 namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use InovantiBank\Holydays\Contracts\HolydaysRepositoryInterface;
-use InovantiBank\Holydays\Services\HolydaysService;
+use InovantiBank\Holidays\Contracts\HolidaysRepositoryInterface;
+use InovantiBank\Holidays\Services\HolidaysService;
 use Tests\TestCase;
 
-class HolydaysTest extends TestCase
+class HolidaysTest extends TestCase
 {
     use RefreshDatabase;
 
-    protected HolydaysService $service;
+    protected HolidaysService $service;
 
     protected function setUp(): void
     {
         parent::setUp();
 
-        $this->service = $this->app->make(HolydaysService::class);
+        $this->service = $this->app->make(HolidaysService::class);
     }
 
     public function test_it_can_create_holiday()
@@ -127,7 +127,7 @@ class HolydaysTest extends TestCase
             'state' => 'SP',
         ]);
 
-        $repo = $this->app->make(HolydaysRepositoryInterface::class);
+        $repo = $this->app->make(HolidaysRepositoryInterface::class);
 
         $filtered = $repo->filter(['scope' => 'state']);
         $this->assertCount(1, $filtered);

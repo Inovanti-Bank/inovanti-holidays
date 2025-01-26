@@ -1,9 +1,9 @@
 <?php
 
-namespace InovantiBank\Holydays\Console\Commands;
+namespace InovantiBank\Holidays\Console\Commands;
 
 use Illuminate\Console\Command;
-use InovantiBank\Holydays\Services\NationalHolidays;
+use InovantiBank\Holidays\Services\NationalHolidays;
 
 class SaveHolidaysCommand extends Command
 {
