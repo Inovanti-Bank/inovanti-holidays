@@ -35,7 +35,8 @@ class DateHelper
 
         // Comparar se a data existe na lista
         foreach ($allHolidays as $holiday) {
-            if ($holiday['date'] === $date->toDateString()) {
+            $holidayDate = Carbon::parse($holiday['date'])->toDateString();
+            if ($holidayDate === $date->toDateString()) {
                 return true;
             }
         }
