@@ -1,21 +1,21 @@
 # Inovanti Holidays - Gerenciamento de Feriados
 
-[![Latest Stable Version](http://poser.pugx.org/inovanti-bank/inovanti-holidays/v)](https://packagist.org/packages/inovanti-bank/inovanti-holidays) 
-[![Total Downloads](http://poser.pugx.org/inovanti-bank/inovanti-holidays/downloads)](https://packagist.org/packages/inovanti-bank/inovanti-holidays) 
-[![License](http://poser.pugx.org/inovanti-bank/inovanti-holidays/license)](https://packagist.org/packages/inovanti-bank/inovanti-holidays) 
-[![PHP Version Require](http://poser.pugx.org/inovanti-bank/inovanti-holidays/require/php)](https://packagist.org/packages/inovanti-bank/inovanti-holidays)
+[![Latest Stable Version](https://poser.pugx.org/inovanti-bank/inovanti-holidays/v)](https://packagist.org/packages/inovanti-bank/inovanti-holidays) 
+[![Total Downloads](https://poser.pugx.org/inovanti-bank/inovanti-holidays/downloads)](https://packagist.org/packages/inovanti-bank/inovanti-holidays) 
+[![License](https://poser.pugx.org/inovanti-bank/inovanti-holidays/license)](https://packagist.org/packages/inovanti-bank/inovanti-holidays) 
+[![PHP Version Require](https://poser.pugx.org/inovanti-bank/inovanti-holidays/require/php)](https://packagist.org/packages/inovanti-bank/inovanti-holidays)
 
 ## Introdução
 
 O **inovanti-holidays** é um componente Laravel 11 para gerenciamento de feriados nacionais e estaduais. Ele permite:
 
-✅ Listar, criar, atualizar e deletar feriados
-✅ Verificar se uma data é feriado
-✅ Calcular o próximo dia útil a partir de uma data
-✅ Popular a tabela de feriados via comando Artisan
-✅ Gerenciar feriados fixos e móveis
-✅ Configurar estados e anos desejados
-✅ Integrar facilmente com outras aplicações Laravel
+- ✅ Listar, criar, atualizar e deletar feriados
+- ✅ Verificar se uma data é feriado
+- ✅ Calcular o próximo dia útil a partir de uma data
+- ✅ Popular a tabela de feriados via comando Artisan
+- ✅ Gerenciar feriados fixos e móveis
+- ✅ Configurar estados e anos desejados
+- ✅ Integrar facilmente com outras aplicações Laravel
 
 ## 📦 Instalação
 
