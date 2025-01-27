@@ -33,4 +33,10 @@ interface HolidaysRepositoryInterface
      * Retorna todos os feriados de determinado ano (sem paginação).
      */
     public function filter(array $conditions, int $perPage);
+
+    /**
+     * Retorna o primeiro feriado que corresponde aos campos informados
+     * (ignorando um ID específico, se fornecido).
+     */
+    public function findDuplicateHoliday(array $data, ?int $excludeId = null);
 }
