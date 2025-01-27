@@ -3,14 +3,19 @@
 namespace InovantiBank\Holidays\Services;
 
 use InovantiBank\Holidays\Contracts\HolidaysRepositoryInterface;
+use InovantiBank\Holidays\Helpers\MultiYearHolidayCreator;
+use RuntimeException;
 
 class HolidaysService
 {
     protected HolidaysRepositoryInterface $repository;
 
-    public function __construct(HolidaysRepositoryInterface $repository)
+    protected MultiYearHolidayCreator $multiYearCreator;
+
+    public function __construct(HolidaysRepositoryInterface $repository, MultiYearHolidayCreator $multiYearCreator)
     {
         $this->repository = $repository;
+        $this->multiYearCreator = $multiYearCreator;
     }
 
     /**
@@ -24,9 +29,18 @@ class HolidaysService
     /**
      * Cria um novo feriado.
      */
-    public function create(array $data)
+    public function create(array $data, bool $persistentForAllYears = true)
     {
-        return $this->repository->create($data);
+        if (! $persistentForAllYears) {
+            $duplicate = $this->repository->findDuplicateHoliday($data);
+            if ($duplicate) {
+                throw new RuntimeException('Já existe um feriado com esses parâmetros.');
+            }
+
+            return $this->repository->create($data);
+        }
+
+        return $this->multiYearCreator->createForAllYears($data);
     }
 
     /**
@@ -34,6 +48,12 @@ class HolidaysService
      */
     public function update(array $data, int $id)
     {
+        $duplicate = $this->repository->findDuplicateHoliday($data, $id);
+
+        if ($duplicate) {
+            throw new RuntimeException('Já existe outro feriado com esses parâmetros.');
+        }
+
         return $this->repository->update($data, $id);
     }
 
