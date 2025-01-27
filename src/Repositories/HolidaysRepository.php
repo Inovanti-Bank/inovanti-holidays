@@ -2,6 +2,7 @@
 
 namespace InovantiBank\Holidays\Repositories;
 
+use Carbon\Carbon;
 use InovantiBank\Holidays\Contracts\HolidaysRepositoryInterface;
 use InovantiBank\Holidays\Exceptions\InvalidYearException;
 use InovantiBank\Holidays\Models\Holiday;
@@ -57,21 +58,41 @@ class HolidaysRepository implements HolidaysRepositoryInterface
         $query = Holiday::query();
 
         foreach ($conditions as $field => $value) {
-            /**
-             * Opções de implementação:
-             * 1) Se $value for um array, interpretamos como [operador, valor].
-             * 2) Caso contrário, interpretamos como 'WHERE $field = $value'.
-             */
             if (is_array($value)) {
-                // Ex: ['name' => ['like', '%carnaval%']]
                 [$operator, $operand] = $value;
                 $query->where($field, $operator, $operand);
             } else {
-                // Ex: ['name' => 'Ano Novo']
                 $query->where($field, '=', $value);
             }
         }
 
         return $query->paginate($perPage);
+    }
+
+    public function findDuplicateHoliday(array $data, ?int $excludeId = null)
+    {
+        $query = Holiday::query();
+
+        if (isset($data['date'])) {
+            $query->where('date', Carbon::parse($data['date']));
+        }
+        if (isset($data['type'])) {
+            $query->where('type', $data['type']);
+        }
+        if (isset($data['scope'])) {
+            $query->where('scope', $data['scope']);
+        }
+        if (isset($data['optional'])) {
+            $query->where('optional', $data['optional']);
+        }
+        if (isset($data['state'])) {
+            $query->where('state', $data['state']);
+        }
+
+        if (! is_null($excludeId)) {
+            $query->where('id', '!=', $excludeId);
+        }
+
+        return $query->first();
     }
 }
