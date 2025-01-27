@@ -12,18 +12,16 @@ class NationalHolidays
      *
      * @param  int  $yearsAhead  quantidade de anos à frente (padrão: 10)
      */
-    public function saveHolidaysToDatabase(int $yearsAhead = 10): void
+    public function saveHolidaysToDatabase(int $years, int $yearFrom, bool $truncate = false): void
     {
-        $currentYear = Carbon::now()->year;
+        $yearFrom = $yearFrom ?? Carbon::now()->year;
 
-        for ($year = $currentYear; $year <= $currentYear + $yearsAhead; $year++) {
-            // Gera listas
+        for ($year = $yearFrom; $year < $yearFrom + $years; $year++) {
             $fixedHolidays = $this->getFixedHolidays($year);
             $movableHolidays = $this->getMovableHolidays($year);
             $allHolidays = array_merge($fixedHolidays, $movableHolidays);
             $allHolidays = $this->sortByDate($allHolidays);
 
-            // Salva/atualiza no banco
             foreach ($allHolidays as $holiday) {
                 Holiday::updateOrCreate(
                     [
