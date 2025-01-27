@@ -1,9 +1,9 @@
 # Inovanti Holidays - Gerenciamento de Feriados
 
-[![Latest Stable Version](https://poser.pugx.org/inovanti-bank/inovanti-Holidays/v)](https://packagist.org/packages/inovanti-bank/inovanti-Holidays)
-[![Total Downloads](https://poser.pugx.org/inovanti-bank/inovanti-Holidays/downloads)](https://packagist.org/packages/inovanti-bank/inovanti-Holidays)
-[![License](https://poser.pugx.org/inovanti-bank/inovanti-Holidays/license)](https://packagist.org/packages/inovanti-bank/inovanti-Holidays)
-[![PHP Version Require](https://poser.pugx.org/inovanti-bank/inovanti-Holidays/require/php)](https://packagist.org/packages/inovanti-bank/inovanti-Holidays)
+[![Latest Stable Version](http://poser.pugx.org/inovanti-bank/inovanti-holidays/v)](https://packagist.org/packages/inovanti-bank/inovanti-holidays) 
+[![Total Downloads](http://poser.pugx.org/inovanti-bank/inovanti-holidays/downloads)](https://packagist.org/packages/inovanti-bank/inovanti-holidays) 
+[![License](http://poser.pugx.org/inovanti-bank/inovanti-holidays/license)](https://packagist.org/packages/inovanti-bank/inovanti-holidays) 
+[![PHP Version Require](http://poser.pugx.org/inovanti-bank/inovanti-holidays/require/php)](https://packagist.org/packages/inovanti-bank/inovanti-holidays)
 
 ## Introdução
 
